@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    >
+    <TextView
+        android:id="@+id/ScoreLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingVertical="14dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:background="@android:color/white"/>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white" >
+
+        <ImageView
+            android:id="@+id/poison"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:src="@drawable/poison"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/character"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/character"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/food"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/food"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/spike"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/spike"
+            android:visibility="invisible"/>
+        <LinearLayout
+            android:id="@+id/startLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Catch the Food!!"
+                android:textSize="24sp"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/HighScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High Score: 0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="80dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="START"
+                android:layout_marginTop="60dp"
+                android:onClick="startGame"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QUIT"
+                android:layout_marginTop="20dp"
+                android:onClick="quitGame"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>
